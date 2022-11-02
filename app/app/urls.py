@@ -21,7 +21,7 @@ from django.contrib import admin
 from django.urls import path
 
 # SpectacularAPIView generates the schema file needed for our project.
-# SpectacularSwaggerView use our schema to generate a GUI for our API documentation.
+# SpectacularSwaggerView use our schema to generate a GUI for documentation.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
