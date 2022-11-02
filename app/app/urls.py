@@ -18,7 +18,7 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 # SpectacularAPIView generates the schema file needed for our project.
 # SpectacularSwaggerView use our schema to generate a GUI for documentation.
@@ -30,5 +30,6 @@ urlpatterns = [
         'api/docs/',
         SpectacularSwaggerView.as_view(url_name='api-schema'),
         name='api-docs',
-    )
+    ),
+    path('api/user/', include('user.urls')),
 ]
